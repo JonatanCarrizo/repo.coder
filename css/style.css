@@ -30,7 +30,6 @@ body {
     background-color: var(--color-blanco);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    /* Tamaño base para desktop */
     line-height: 1.6;
     color: var(--color-texto-oscuro);
 }
@@ -69,13 +68,9 @@ p {
 
 .navbar-logo img {
     height: 50px;
-    /* Ajusta la altura de tu logo */
     border-radius: 100%;
-    /* Lo hace redondo */
     margin: 5px 0;
-    /* Espacio vertical para el logo */
     vertical-align: middle;
-    /* Alineación del logo */
 }
 
 /* --- Botón de Hamburguesa --- */
@@ -87,31 +82,22 @@ p {
     padding: 10px;
     z-index: 1001;
     font-size: 0;
-
-    /* Posicionamiento absoluto para que esté a la derecha y centrado */
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-
-    /* CORRECCIÓN CLAVE: Asegura que el padding no desborde el botón */
     box-sizing: border-box;
-    /* El padding se incluye DENTRO del ancho/alto del botón */
 }
 
 .hamburger-menu .bar {
     display: block;
     width: 28px;
-    /* Ancho de las barras */
     height: 3px;
     background-color: var(--color-blanco);
     margin: 6px 0;
-    /* Espacio entre barras */
     transition: all 0.3s ease;
-    /* Transición suave para animaciones si las añades */
     border-radius: 2px;
     box-sizing: border-box;
-    /* También para las barras internas */
 }
 
 /* --- Menú de Navegación (Desktop) --- */
@@ -120,16 +106,12 @@ p {
     padding: 0;
     margin: 0;
     display: flex;
-    /* Flex para desktop: horizontal */
     justify-content: center;
-    /* Alinea los ítems del menú a la derecha */
     flex-grow: 1;
-    /* Permite que ocupe el espacio restante */
 }
 
 .navbar-menu li {
     margin: 0 15px;
-    /* Espacio horizontal entre los elementos del menú */
 }
 
 .navbar-menu :hover {
@@ -142,9 +124,7 @@ p {
     color: var(--color-blanco);
     font-weight: bold;
     padding: 8px 0;
-    /* Padding vertical para el clic */
     display: block;
-    /* Para que el padding vertical sea efectivo */
     transition: color 0.3s ease;
 }
 
@@ -263,92 +243,51 @@ p {
 
 .barra-busqueda-decorativa {
     position: absolute;
-    /* Crucial para posicionarla libremente dentro de .imagen-con-texto */
     top: 15%;
-    /* Ajusta la distancia desde el borde superior de la imagen. Empieza con 15% y prueba. */
     left: 50%;
-    /* Centra horizontalmente el elemento */
     transform: translateX(-50%);
-    /* Ajuste fino para asegurar el centrado perfecto */
-
     width: 90%;
-    /* Hace que la barra sea más larga a los costados (90% del ancho del padre) */
     max-width: 650px;
-    /* Ancho máximo para pantallas grandes, para que no sea excesivamente larga */
-
     background-color: rgba(255, 255, 255, 0.2);
-    /* Fondo blanco con 20% de opacidad (transparente) */
     backdrop-filter: blur(5px);
-    /* Efecto de desenfoque "vidrioso" para lo que está detrás */
     -webkit-backdrop-filter: blur(5px);
-    /* Prefijo para compatibilidad con navegadores Webkit */
-
     border-radius: 50px;
-    /* Bordes redondeados para un look moderno */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* Sombra para que resalte y tenga profundidad */
     z-index: 2;
-    /* Asegura que la barra esté por encima de la imagen y el texto principal */
-
-    /* Para el input-group de Bootstrap */
     padding: 8px 15px;
-    /* Espacio interno dentro de la barra para el input y el botón */
     display: flex;
-    /* Asegura que el input y el botón se alineen correctamente */
     align-items: center;
-    /* Centra verticalmente el contenido dentro de la barra */
 }
 
-/* Estilos para el campo de entrada (input) dentro de la barra de búsqueda */
 .barra-busqueda-decorativa .form-control {
     background-color: transparent;
-    /* Hace el fondo del input transparente */
     border: none;
-    /* Elimina cualquier borde predeterminado de Bootstrap */
     color: var(--color-blanco);
-    /* Color del texto que el usuario escribirá (blanco para que resalte) */
     font-size: 1.1em;
-    /* Tamaño de fuente del texto */
     padding: 5px 0;
-    /* Pequeño padding vertical para el texto dentro del input */
     flex-grow: 1;
-    /* Permite que el input ocupe el máximo espacio disponible */
     outline: none;
-    /* Elimina el contorno azul al hacer clic (focus) */
 }
 
-/* Estilos para el texto del placeholder dentro del input */
 .barra-busqueda-decorativa .form-control::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    /* Color del placeholder (blanco con opacidad) */
 }
 
-/* Estilos para el botón de la lupa dentro de la barra de búsqueda */
 .barra-busqueda-decorativa .btn {
     background-color: transparent;
-    /* Hace el fondo del botón transparente */
     border: none;
-    /* Elimina el borde del botón */
     color: var(--color-blanco);
-    /* Color del icono de la lupa (blanco) */
     cursor: pointer;
-    /* Indica que es un elemento clicable */
     padding: 8px;
-    /* Espacio alrededor del icono de la lupa */
     margin-left: 10px;
-    /* Espacio entre el input y el botón */
     font-size: 1.2em;
-    /* Tamaño del icono */
     transition: all 0.2s ease-in-out;
-    /* Transición suave para efectos al pasar el ratón */
 }
 
 /* Efecto al pasar el ratón por encima del botón de la lupa */
 .barra-busqueda-decorativa .btn:hover {
     color: var(--color-acento-naranja);
-    /* Cambia el color de la lupa a naranja al pasar el ratón */
     transform: scale(1.1);
-    /* Ligeramente más grande al pasar el ratón */
 }
 
 /* --- CONTENIDO SUPERPUESTO (Texto y Botón) --- */
@@ -358,22 +297,12 @@ p {
     max-width: 800px;
     padding: 20px;
     box-sizing: border-box;
-
-    /* Posicionamiento para que esté debajo de la barra de búsqueda y centrado */
     position: absolute;
     top: 50%;
-    /* Inicialmente en el 50% de la altura de la imagen */
     left: 50%;
-    /* Centra horizontalmente */
     transform: translate(-50%, -50%);
-    /* Ajuste fino para centrarlo perfectamente */
     z-index: 1;
-    /* Asegura que esté debajo de la barra de búsqueda si se superponen */
-
-    /* Importante: Añadir padding-top o margin-top para moverlo DENTRO de la imagen */
-    /* Este ajuste es crucial para que no choque con la barra de búsqueda y la navbar */
     padding-top: 150px;
-    /* Ajusta este valor. 150px = ~ la altura de la barra + espacio */
 }
 
 .contenido-superpuesto h1 {
@@ -419,22 +348,16 @@ h1 {
 h2 {
     color: var(--color-negro);
     font-size: 2em;
-    /* Ajustado para un mejor contraste */
     margin-top: 25px;
     margin-bottom: 15px;
     text-align: center;
-    /* Asegura que los h2 también estén centrados */
 }
 
 .container-texto {
     padding: 20px 40px;
-    /* Padding para el contenido */
     margin: 0 auto;
-    /* Centra el contenedor y elimina margen horizontal duplicado */
     max-width: 900px;
-    /* Ancho máximo para el texto */
     box-sizing: border-box;
-    /* Incluye padding en el ancho total */
 }
 
 .primer-texto {
@@ -442,21 +365,15 @@ h2 {
     text-align: center;
     font-size: 1.2em;
     padding: 15px;
-    /* Padding para el texto si tiene fondo */
     border-radius: 8px;
-    /* Bordes redondeados si tiene fondo */
     margin-bottom: 20px;
-    /* Espacio inferior */
 }
 
 .seccion-centrada {
     text-align: center;
     margin: 0 auto;
-    /* Centra la sección */
     max-width: 900px;
-    /* Limita el ancho para que el texto no se extienda demasiado */
     padding: 0 20px;
-    /* Padding lateral para evitar que el texto se pegue a los bordes */
     word-spacing: 2px;
     box-sizing: border-box;
 }
@@ -490,15 +407,12 @@ h2 {
     border: 1px solid var(--color-borde-gris);
     border-radius: 8px;
     overflow: hidden;
-    /* Asegura que nada sobresalga */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: var(--color-blanco);
     text-align: center;
     display: flex;
-    /* Para organizar la imagen y la info */
     flex-direction: column;
     justify-content: space-between;
-    /* Espacio entre imagen y info */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -509,7 +423,6 @@ h2 {
 
 .producto-imagen {
     height: 160px;
-    /* Altura fija para las imágenes de producto */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,13 +435,11 @@ h2 {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    /* Ajusta la imagen dentro del contenedor sin recortar */
 }
 
 .producto-info {
     padding: 15px;
     flex-grow: 1;
-    /* Permite que la info ocupe el espacio restante */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -557,9 +468,7 @@ h2 {
     cursor: pointer;
     font-size: 1em;
     width: 90%;
-    /* Ocupa casi todo el ancho */
     margin: 0 auto;
-    /* Centra el botón */
     transition: background-color 0.3s ease;
 }
 
@@ -571,11 +480,9 @@ h2 {
 .catalogo-grid-section {
     padding: 60px 20px;
     background-color: var(--color-metal-oscuro);
-    /* Usando variable */
     text-align: center;
     font-family: 'Arial', sans-serif;
     color: var(--color-texto-claro-grid);
-    /* Color de texto general para la sección */
 }
 
 .catalogo-grid-section h2 {
@@ -592,7 +499,6 @@ h2 {
     gap: 15px;
     max-width: 960px;
     margin: 0 auto;
-    /* Desktop layout (4 columnas) */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, minmax(120px, auto));
     grid-template-areas:
@@ -639,7 +545,6 @@ h2 {
     padding: 15px;
     text-align: center;
     z-index: 1;
-    /* Asegura que el contenido esté por encima del overlay */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
@@ -657,7 +562,6 @@ h2 {
 
 .catalogo-item:hover {
     transform: scale(1.05);
-    /* Escala ligeramente en lugar de traducir y escalar más */
     border-color: var(--color-acento-azul-grid);
     box-shadow: inset 0 0 10px rgb(255, 255, 255),
         0 10px 20px var(--color-sombra-profunda-grid);
@@ -666,10 +570,8 @@ h2 {
 
 .catalogo-item:hover::before {
     background-color: rgba(0, 0, 0, 0.664);
-    /* La capa oscura se aclara a 10% de opacidad */
 }
 
-/* Imágenes específicas para cada ítem del grid */
 .item-1 {
     grid-area: item1;
     background-image: url('../img/gridcuerdas.jpg');
@@ -706,44 +608,34 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    /* Más padding para la sección general */
     background-color: var(--color-fondo-claro);
 }
 
 .formulario-contacto {
     background-color: var(--color-blanco);
     padding: 30px;
-    /* Aumentado el padding */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra más pronunciada */
     margin-bottom: 40px;
-    /* Más espacio debajo del formulario */
     width: 90%;
-    /* Ajustado el ancho */
     max-width: 700px;
-    /* Ancho máximo para el formulario */
     box-sizing: border-box;
 }
 
 .formulario-contacto h2 {
     text-align: center;
     margin-bottom: 25px;
-    /* Más espacio debajo del título del formulario */
     color: var(--color-texto-oscuro);
     font-size: 2.2em;
-    /* Tamaño de fuente para el h2 del formulario */
 }
 
 .form-group {
     margin-bottom: 20px;
-    /* Más espacio entre grupos de formulario */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    /* Más espacio debajo de la etiqueta */
     font-weight: bold;
     color: var(--color-texto-gris);
     font-size: 1.1em;
@@ -755,12 +647,10 @@ h2 {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    /* Más padding para los inputs */
     border: 1px solid var(--color-borde-gris);
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 1em;
-    /* Ajustado el tamaño de fuente */
     transition: border-color 0.3s ease;
 }
 
@@ -772,23 +662,17 @@ h2 {
 
 .form-group textarea {
     resize: vertical;
-    /* Permite al usuario ajustar la altura */
     min-height: 120px;
-    /* Altura mínima para el área de texto */
 }
 
 .boton-enviar {
     background-color: #ff0000;
-    /* Tu color de botón original */
     color: var(--color-blanco);
     padding: 14px 25px;
-    /* Más padding */
     border: none;
     border-radius: 50px;
-    /* Botón más redondeado */
     cursor: pointer;
     font-size: 1.1em;
-    /* Tamaño de fuente */
     width: 100%;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -918,7 +802,6 @@ footer {
     /* Navbar */
     .navbar {
         padding: 0 15px;
-        /* Reduce padding lateral */
     }
 
     .navbar-logo img {
@@ -945,20 +828,17 @@ footer {
     }
 
     .navbar-menu.active {
-        /* Esta clase se añade con JavaScript para mostrar el menú */
         display: flex;
     }
 
     .navbar-menu li {
         margin: 0;
-        /* Elimina márgenes horizontales */
         width: 100%;
         text-align: center;
     }
 
     .navbar-menu a {
         padding: 12px 20px;
-        /* Más padding para los enlaces del menú vertical */
         font-size: 1.1em;
     }
 
@@ -974,36 +854,23 @@ footer {
     /* Barra de Búsqueda para Tablets */
     .barra-busqueda-decorativa {
         top: 12%;
-        /* Ajusta la posición vertical para tablets */
         width: 90%;
-        /* Mantiene el 90% de ancho */
         max-width: 550px;
-        /* Ajusta el ancho máximo para tablets */
         padding: 6px 12px;
-        /* Reduce el padding interno */
     }
 
     .barra-busqueda-decorativa .form-control {
         font-size: 1em;
-        /* Reduce el tamaño de fuente */
     }
 
     .barra-busqueda-decorativa .btn {
         font-size: 1.1em;
-        /* Reduce el tamaño del icono */
         padding: 6px;
     }
 
     /* Contenido Superpuesto para Tablets */
     .contenido-superpuesto {
-        /*
-            Ajustar si es necesario. Ya tiene position: absolute, top: 50%, left: 50%,
-            transform: translate(-50%, -50%) y padding-top: 150px (en desktop).
-            Aquí solo ajustar el padding-top si la barra de búsqueda y la navbar
-            ocupan menos espacio y el contenido puede subir un poco.
-        */
         padding-top: 100px;
-        /* Ajusta este valor para tablets */
     }
 
     .contenido-superpuesto h1 {
@@ -1054,14 +921,12 @@ footer {
     /* Catálogo de Productos Normal */
     .productos-container {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        /* Permite 2 o 3 columnas */
         gap: 20px;
         max-width: 750px;
     }
 
     .producto {
         max-width: none;
-        /* Elimina el max-width fijo para el grid */
     }
 
     .producto-imagen {
@@ -1076,9 +941,7 @@ footer {
 
     .catalogo-grid-container {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columnas */
         grid-template-rows: auto;
-        /* Altura automática */
         grid-template-areas:
             "item1 item2"
             "item3 item3"
@@ -1162,7 +1025,6 @@ footer {
 
     .navbar-menu {
         top: 50px;
-        /* La altura total de la navbar es ~50px, el menú empieza debajo */
         padding: 8px 0;
     }
 
@@ -1179,13 +1041,9 @@ footer {
     /* Barra de Búsqueda para Móviles */
     .barra-busqueda-decorativa {
         top: 8%;
-        /* Aún más arriba en móviles */
         width: 95%;
-        /* Más ancha para aprovechar el espacio */
         max-width: 350px;
-        /* Límite para móviles */
         padding: 5px 10px;
-        /* Reduce aún más el padding interno */
     }
 
     .barra-busqueda-decorativa .form-control {
@@ -1200,10 +1058,7 @@ footer {
 
     /* Contenido Superpuesto para Móviles */
     .contenido-superpuesto {
-        /* Si la barra choca con el texto, aquí es donde lo ajustarás */
-        /* Prueba con un margin-top si es un problema, o top: XXpx; si es absolute */
         padding-top: 80px;
-        /* Ajusta este valor para móviles */
     }
 
     .contenido-superpuesto h1 {
@@ -1289,7 +1144,6 @@ footer {
 
     .catalogo-grid-container {
         grid-template-columns: 1fr;
-        /* Una sola columna para móviles */
         grid-template-rows: auto;
         gap: 10px;
         grid-template-areas:
