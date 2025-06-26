@@ -1,0 +1,52 @@
+// Mixin para Media Queries
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin mobile-lg {
+    @media (max-width: $breakpoint-mobile-lg) {
+        @content;
+    }
+}
+
+@mixin mobile-md {
+    @media (max-width: $breakpoint-mobile-md) {
+        @content;
+    }
+}
+
+@mixin mobile-sm {
+    @media (max-width: $breakpoint-mobile-sm) {
+        @content;
+    }
+}
+
+// Mixin para eliminar el margen del último elemento
+@mixin last-child-no-margin {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Mixin para sombra de texto (hero section)
+@mixin text-shadow($color: rgba(0, 0, 0, 0.7), $radius: 4px) {
+    text-shadow: 2px 2px $radius $color;
+}
+
+// Mixin para pseudo-elemento de línea debajo del título
+@mixin title-underline($width: 80px, $height: 4px, $color: $color-acento-naranja, $bottom: 0, $left: 50%, $transform: translateX(-50%)) {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: $bottom;
+        left: $left;
+        transform: $transform;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        border-radius: 2px; 
+        opacity: 0.8; 
+    }
+}

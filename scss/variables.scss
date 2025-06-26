@@ -1,0 +1,67 @@
+// --- Paleta de Colores ---
+$color-negro: #000000;
+$color-blanco: #ffffff;
+$color-acento-naranja: #da6901;
+$color-azul-primario: #007bff;
+$color-azul-hover: #0056b3;
+$color-fondo-claro: #f8f8f8;
+$color-texto-oscuro: #333;
+$color-texto-gris: #555;
+$color-borde-gris: #ccc;
+$color-exito-verde: green;
+
+// Colores específicos para el background del body y main, si no los quieres en la paleta principal
+$color-fondo-body-oscuro-transparente: #2c2a2a94;
+$color-fondo-main-oscuro-transparente: #69655d94;
+$color-titulo-claro-especifico: #f5f1f1;
+
+// --- Colores para el Grid de Catálogos ---
+$color-metal-oscuro: #ffffff;
+$color-metal-medio: #000000;
+$color-metal-claro: #000000;
+$color-acento-azul-grid: #1b1a1a;
+$color-texto-claro-grid: #ffffff;
+$color-sombra-profunda-grid: rgba(0, 0, 0, 0.6);
+$color-sombra-ligera-grid: rgba(0, 0, 0, 0.3);
+
+// --- Tipografía ---
+$font-family-base: Verdana, Geneva, Tahoma, sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// --- Espaciado y Tamaños Generales ---
+$padding-base: 20px;
+$margin-base: 30px;
+$max-width-container: 1200px;
+$navbar-height-desktop: 60px;
+$navbar-height-mobile: 55px; 
+
+// --- Bordes y Sombras ---
+$borde-radio-suave: 4px;
+$borde-grosor: 2px;
+$box-shadow-ligero: 0 2px 5px rgba(0, 0, 0, 0.2);
+$box-shadow-medio: 0 4px 10px rgba(0, 0, 0, 0.1);
+$box-shadow-profundo: 0 8px 20px rgba(0, 0, 0, 0.15);
+$box-shadow-navbar-menu: 0 8px 16px rgba(0, 0, 0, 0.4);
+$box-shadow-contact-form: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// --- Transiciones ---
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+$transition-slow: 0.5s cubic-bezier(0.23, 1, 0.32, 1); 
+
+// --- Puntos de Ruptura (Breakpoints para Responsive) ---
+$breakpoint-desktop-lg: 1200px;
+$breakpoint-desktop-md: 1024px;
+$breakpoint-tablet: 991px;
+$breakpoint-mobile-lg: 768px;
+$breakpoint-mobile-md: 600px;
+$breakpoint-mobile-sm: 480px;
+
+// --- Z-index ---
+$zindex-navbar: 1000;
+$zindex-hamburger: 1001;
+$zindex-hero-overlay: 1;
+$zindex-hero-search: 2;
+$zindex-hero-content: 1;
+$zindex-navbar-menu-mobile: 999;

@@ -1,0 +1,109 @@
+@import 'variables';
+
+/* --- Contacto (Formulario) --- */
+.formulario-contacto {
+    background-color: $color-blanco;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: $box-shadow-contact-form;
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 700px;
+    box-sizing: border-box;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: $color-texto-oscuro;
+        font-size: 2.2em;
+
+        @include mobile-lg {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: $color-texto-gris;
+        font-size: 1.1em;
+
+        @include mobile-lg {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid $color-borde-gris;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 1em;
+        transition: border-color $transition-medium;
+
+        &:focus {
+            border-color: $color-azul-primario;
+            outline: none;
+        }
+
+        @include mobile-lg {
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+.ubicacion-mapa {
+    text-align: center;
+    width: 95%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+
+    h2 {
+        margin-bottom: 20px;
+        color: $color-texto-oscuro;
+        font-size: 2.2em;
+
+        @include mobile-lg {
+            font-size: 1.6em;
+        }
+    }
+}
+
+.mapa-grande {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    @include tablet {
+        height: 380px;
+    }
+
+    @include mobile-lg {
+        height: 250px;
+    }
+}

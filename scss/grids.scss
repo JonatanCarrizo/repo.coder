@@ -1,0 +1,163 @@
+@import 'variables';
+@import 'mixins';
+
+/* --- Grids de Catálogos --- */
+.catalogo-grid-section {
+    padding: 60px $padding-base;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Arial', sans-serif; 
+    color: $color-texto-claro-grid;
+
+    h2 {
+        font-size: 2.8em;
+        color: #f8f8f8; 
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 8px $color-acento-azul-grid; 
+
+        @include tablet {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+        }
+
+        @include mobile-lg {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.catalogo-grid-container {
+    display: grid;
+    gap: 15px;
+    max-width: 960px; 
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(120px, auto));
+    grid-template-areas:
+        "item1 item1 item2 item3"
+        "item4 item5 item5 item3"
+        "item4 item6 item6 item6";
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; 
+        grid-template-areas:
+            "item1 item2"
+            "item3 item3"
+            "item4 item5"
+            "item6 item6";
+        max-width: 700px; 
+    }
+
+    @include mobile-lg {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        gap: 10px;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6";
+        max-width: 350px; 
+    }
+}
+
+.catalogo-item {
+    background-color: $color-metal-medio;
+    color: $color-texto-claro-grid;
+    text-decoration: none;
+    border-radius: $borde-radio-suave;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: $borde-grosor solid $color-metal-claro;
+    box-shadow: inset 0 0 3px rgb(204, 201, 201), 
+        0 4px 8px $color-sombra-profunda-grid; 
+    transition: transform $transition-medium, box-shadow $transition-medium, background-color $transition-medium, border-color $transition-medium;
+    min-height: 120px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.014); 
+        transition: background-color $transition-medium;
+        z-index: 0;
+    }
+
+    .item-content { 
+        padding: 15px;
+        text-align: center;
+        z-index: 1;
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9); 
+    }
+
+    h3 {
+        font-size: 1.6em;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @include tablet {
+            font-size: 1.4em;
+        }
+
+        @include mobile-lg {
+            font-size: 1.2em;
+        }
+    }
+
+    p {
+        font-size: 0.9em;
+        opacity: 0.9;
+
+        @include mobile-lg {
+            font-size: 0.8em;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        border-color: $color-acento-azul-grid;
+        box-shadow: inset 0 0 10px rgb(255, 255, 255), 
+            0 10px 20px $color-sombra-profunda-grid;
+        cursor: pointer;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.068); 
+        }
+
+        @include mobile-lg { 
+            transform: translateY(0) scale(1.02);
+        }
+    }
+
+    @include tablet {
+        min-height: 140px;
+    }
+
+    @include mobile-lg {
+        min-height: 120px;
+    }
+}
+
+.item-1 { grid-area: item1; background-image: url('../img/gridcuerdas.jpg'); }
+.item-2 { grid-area: item2; background-image: url('../img/gridbaterias.jpg'); }
+.item-3 { grid-area: item3; background-image: url('../img/gridteclados.jpg'); }
+.item-4 { grid-area: item4; background-image: url('../img/gridvientos.jpg'); }
+.item-5 { grid-area: item5; background-image: url('../img/gridsonidos.jpg'); }
+.item-6 { grid-area: item6; background-image: url('../img/gridcontacto.jpg'); }

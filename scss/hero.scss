@@ -1,0 +1,174 @@
+@import 'variables';
+@import 'mixins';
+
+/* --- Hero Section (Imagen con Texto) --- */
+.imagen-con-texto {
+    background-image: url('../img/foto-de-inicio.png.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 50px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.432);
+        z-index: $zindex-hero-overlay;
+    }
+
+    @include tablet {
+        height: 600px;
+    }
+
+    @include mobile-lg {
+        height: 400px;
+    }
+}
+
+/* --- Barra de Búsqueda Decorativa --- */
+.barra-busqueda-decorativa {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 650px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: $zindex-hero-search;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+
+    .form-control {
+        background-color: transparent;
+        border: none;
+        color: $color-blanco;
+        font-size: 1.1em;
+        padding: 5px 0;
+        flex-grow: 1;
+        outline: none;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .btn { 
+        background-color: transparent;
+        border: none;
+        color: $color-blanco;
+        cursor: pointer;
+        padding: 8px;
+        margin-left: 10px;
+        font-size: 1.2em;
+        transition: all $transition-fast;
+
+        &:hover {
+            color: $color-acento-naranja;
+            transform: scale(1.1);
+        }
+    }
+
+    @include tablet {
+        top: 12%;
+        width: 90%;
+        max-width: 550px;
+        padding: 6px 12px;
+
+        .form-control {
+            font-size: 1em;
+        }
+
+        .btn {
+            font-size: 1.1em;
+            padding: 6px;
+        }
+    }
+
+    @include mobile-lg {
+        top: 8%;
+        width: 95%;
+        max-width: 350px;
+        padding: 5px 10px;
+
+        .form-control {
+            font-size: 0.9em;
+        }
+
+        .btn {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 8px;
+        }
+    }
+}
+
+/* --- CONTENIDO SUPERPUESTO (Texto y Botón) --- */
+.contenido-superpuesto {
+    color: $color-blanco;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $zindex-hero-content;
+    padding-top: 150px; 
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 15px;
+        @include text-shadow; 
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+        @include text-shadow(rgba(0, 0, 0, 0.7), 3px); 
+        line-height: 1.5;
+    }
+
+    @include tablet {
+        padding-top: 100px; 
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+    }
+
+    @include mobile-lg {
+        padding-top: 80px; 
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 25px;
+        }
+    }
+}

@@ -1,0 +1,348 @@
+
+@import 'variables'; 
+@import 'mixins';   
+
+/* --- Estilos Generales y del Body --- */
+body {
+    margin: 0;
+    background-color: $color-fondo-body-oscuro-transparente;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-texto-oscuro;
+    overflow-x: hidden;
+}
+
+main {
+    background-color: $color-fondo-main-oscuro-transparente;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* --- Secciones de Texto y Marcadores (Estilos Generales) --- */
+h1 {
+    text-align: center;
+    color: $color-negro;
+    font-size: 2.5em;
+    margin: $margin-base 0 15px;
+    padding: 0;
+    text-decoration-line: underline;
+    text-decoration-color: $color-acento-naranja;
+
+    @include mobile-lg {
+        font-size: 1.8em;
+        margin: 25px 0 10px;
+    }
+}
+
+h2 {
+    color: $color-titulo-claro-especifico;
+    font-size: 2em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @include mobile-lg {
+        font-size: 1.6em;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.container-texto {
+    padding: 20px 40px;
+    margin: 0 auto;
+    max-width: 900px;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding: 15px 25px;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    @include mobile-lg {
+        padding: 10px 15px;
+        margin: 0 auto;
+    }
+}
+
+.primer-texto {
+    color: $color-negro;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    @include tablet {
+        font-size: 1em;
+    }
+
+    @include mobile-lg {
+        font-size: 0.95em;
+    }
+}
+
+.seccion-centrada {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 $padding-base;
+    word-spacing: 2px;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding: 15px 25px;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+    @include mobile-lg {
+        padding: 10px 15px;
+        margin: 0 auto;
+    }
+}
+
+.segundo-texto {
+    color: $color-blanco;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+
+    @include tablet {
+        font-size: 1em;
+    }
+
+    @include mobile-lg {
+        font-size: 0.95em;
+    }
+}
+
+.marcas-instrumentos {
+    width: 100%;
+    height: 130px;
+    margin-top: $margin-base;
+    margin-bottom: $margin-base;
+    object-fit: cover;
+
+    @include tablet {
+        height: 100px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    @include mobile-lg {
+        height: 80px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* --------------------------------------------------------------- Mejorar el index textos ----------------------------------------------------------------------------*/
+.info-seccion {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #282828; 
+    color: #e0e0e0; 
+    padding: 50px;
+    margin-bottom: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-width: $max-width-container;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    transition: transform $transition-medium, box-shadow $transition-medium;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+        font-size: 3em;
+        color: #f8f8f8; 
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        text-align: left; 
+
+        @include title-underline($width: 80px, $height: 4px, $color: $color-acento-naranja, $left: 0, $transform: none); // Usando mixin
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.7;
+        color: #c0c0c0; 
+    }
+
+    &__texto {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    &__imagen {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &--izq {
+        border-radius: 12px 60px 60px 12px;
+        padding-left: 60px;
+    }
+
+    &--der {
+        border-radius: 60px 12px 12px 60px;
+        flex-direction: row-reverse;
+        padding-right: 60px;
+
+        .info-seccion__texto h2::after {
+            left: auto;
+            right: 0;
+            transform: none; 
+        }
+    }
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        margin-bottom: 60px;
+        border-radius: 12px; 
+
+        &--izq, &--der {
+            border-radius: 12px;
+            padding: 30px; 
+            flex-direction: column; 
+        }
+        .info-seccion__texto h2 {
+            text-align: center;
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto; 
+            }
+        }
+        .info-seccion__texto {
+            padding-right: 0;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        &__imagen {
+            width: 100%;
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+
+    @include mobile-lg {
+        padding: 20px;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        &__imagen img {
+            max-width: 100%; 
+        }
+    }
+}
+
+/* --------------------------------------------------------------- Iconos de Beneficios ----------------------------------------------------------------------------*/
+.beneficios-icons-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px $padding-base;
+    background-color: transparent;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .beneficio-item {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        padding: 25px;
+        background-color: $color-blanco;
+        border-radius: 8px;
+        box-shadow: $box-shadow-medio;
+        transition: transform $transition-medium, box-shadow $transition-medium;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $box-shadow-profundo;
+        }
+
+        i {
+            font-size: 3.5em;
+            color: #49453e; 
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            color: $color-negro;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            color: $color-texto-gris;
+            line-height: 1.5;
+        }
+    }
+
+    @include mobile-lg {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 15px;
+
+        .beneficio-item {
+            margin-bottom: 25px;
+            min-width: unset;
+            width: 100%;
+            max-width: 400px;
+            @include last-child-no-margin;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/* --- Hero Section (Imagen con Texto) --- */
+.imagen-con-texto {
+  background-image: url("../img/foto-de-inicio.png.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 900px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.imagen-con-texto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.432);
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .imagen-con-texto {
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .imagen-con-texto {
+    height: 400px;
+  }
+}
+
+/* --- Barra de Búsqueda Decorativa --- */
+.barra-busqueda-decorativa {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 650px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+}
+.barra-busqueda-decorativa .form-control {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1em;
+  padding: 5px 0;
+  flex-grow: 1;
+  outline: none;
+}
+.barra-busqueda-decorativa .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.barra-busqueda-decorativa .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.barra-busqueda-decorativa .btn {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+  font-size: 1.2em;
+  transition: all 0.2s ease;
+}
+.barra-busqueda-decorativa .btn:hover {
+  color: #da6901;
+  transform: scale(1.1);
+}
+@media (max-width: 991px) {
+  .barra-busqueda-decorativa {
+    top: 12%;
+    width: 90%;
+    max-width: 550px;
+    padding: 6px 12px;
+  }
+  .barra-busqueda-decorativa .form-control {
+    font-size: 1em;
+  }
+  .barra-busqueda-decorativa .btn {
+    font-size: 1.1em;
+    padding: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .barra-busqueda-decorativa {
+    top: 8%;
+    width: 95%;
+    max-width: 350px;
+    padding: 5px 10px;
+  }
+  .barra-busqueda-decorativa .form-control {
+    font-size: 0.9em;
+  }
+  .barra-busqueda-decorativa .btn {
+    font-size: 1em;
+    padding: 5px;
+    margin-left: 8px;
+  }
+}
+
+/* --- CONTENIDO SUPERPUESTO (Texto y Botón) --- */
+.contenido-superpuesto {
+  color: #ffffff;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding-top: 150px;
+}
+.contenido-superpuesto h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+.contenido-superpuesto p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+@media (max-width: 991px) {
+  .contenido-superpuesto {
+    padding-top: 100px;
+  }
+  .contenido-superpuesto h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  .contenido-superpuesto p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .contenido-superpuesto {
+    padding-top: 80px;
+  }
+  .contenido-superpuesto h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .contenido-superpuesto p {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+}

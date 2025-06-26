@@ -4,70 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cuerdas</title>
+    <title>The Music Hub</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,504;1,504&display=swap"
         rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<body class="productos--body">
 <header class="site-header">
-    <nav class="navbar"><a href="/" class="navbar-logo">
-            <img src="../img/logo3.png.png" alt="Logo de mi sitio">
+    <nav class="navbar"><a href="#" class="navbar-logo">
+                <img src="../img/logo3.png.png" alt="Logo de mi sitio">
+            </a>
+            <button class="hamburger-menu" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/cuerda.html">Cuerda</a></li>
+                <li><a href="../pages/sonido.html">Sonido</a></li>
+                <li><a href="../pages/percusion.html">Percusion</a></li>
+                <li><a href="../pages/teclados.html">Teclados</a></li>
+                <li><a href="../pages/vientos.html">Vientos</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="navbar-icons">
+                <a href="#" class="icon-link"><i class="bi bi-cart"></i></a>
+                <a href="#" class="icon-link"><i class="bi bi-person"></i></a>
+            </div>
+        </nav>
+</header>
+    <main class="productos--main">
+<section class="new-products-section">
+    <h2>Nuestros Productos Destacados</h2>
+    <div class="new-products-grid">
+
+        <a href="#" class="new-product-card">
+            <img src="../img/Guitarras/guitarra-eletrica.webp" alt="Guitarra Eléctrica Clásica" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Guitarra Eléctrica Clásica</h3>
+                <p class="new-product-description">Un sonido potente y diseño icónico para tus riffs.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$899.999</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">12x $74.999 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
         </a>
 
-        <button class="hamburger-menu" aria-label="Abrir menú de navegación">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <a href="#" class="new-product-card">
+            <img src="../img/Guitarras/guitarra-eletrica2.jpg" alt="Batería Acústica Profesional" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Batería Acústica Profesional</h3>
+                <p class="new-product-description">Potencia y versatilidad para cualquier género musical.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$1.599.999</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">12x $133.333 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
 
-        <ul class="navbar-menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../pages/cuerda.html">Cuerda</a></li>
-            <li><a href="../pages/sonido.html">Sonido</a></li>
-            <li><a href="../pages/percusion.html">Percusion</a></li>
-            <li><a href="../pages/teclados.html">Teclados</a></li>
-            <li><a href="../pages/vientos.html">Vientos</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Teclado Sintetizador MIDI" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Teclado Sintetizador MIDI</h3>
+                <p class="new-product-description">Crea sonidos únicos con este avanzado sintetizador.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$650.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">6x $108.333 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
 
-<body>
-    <main>
-        <div class="productos-container">
-            <div class="producto">
-                <div class="producto-imagen">
-                    <img src="../img/guitarra-acustica.jpg" alt="">
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Micrófono Condensador Estudio" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Micrófono Condensador Estudio</h3>
+                <p class="new-product-description">Captura cada detalle con calidad de estudio profesional.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$280.000</span>
+                    <span class="new-product-currency">ARS</span>
                 </div>
-                <div class="producto-info">
-                    <h3 class="producto-nombre">Guitarra Acústica</h3>
-                    <p class="producto-precio">$150.00</p>
-                    <button class="boton-carrito">Agregar al carrito</button>
-                </div>
+                <span class="new-product-installments">3x $93.333 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
             </div>
-            <div class="producto">
-                <div class="producto-imagen">
-                    <img src="../img/guitarra-eletrica2.jpg" alt="">
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Ukelele Soprano Premium" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Ukelele Soprano Premium</h3>
+                <p class="new-product-description">Ideal para principiantes y músicos viajeros.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$75.000</span>
+                    <span class="new-product-currency">ARS</span>
                 </div>
-                <div class="producto-info">
-                    <h3 class="producto-nombre">Guitarra Eletrica</h3>
-                    <p class="producto-precio">$280.00</p>
-                    <button class="boton-carrito">Agregar al carrito</button>
-                </div>
+                <span class="new-product-installments">3x $25.000 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
             </div>
-            <div class="producto">
-                <div class="producto-imagen">
-                    <img src="../img/guitarra-eletrica.webp" alt="">
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Amplificador de Guitarra 50W" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Amplificador de Guitarra 50W</h3>
+                <p class="new-product-description">Potencia y versatilidad para tus ensayos y shows.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$350.000</span>
+                    <span class="new-product-currency">ARS</span>
                 </div>
-                <div class="producto-info">
-                    <h3 class="producto-nombre">Guitarra Eletrica</h3>
-                    <p class="producto-precio">$220.00</p>
-                    <button class="boton-carrito">Agregar al carrito</button>
-                </div>
+                <span class="new-product-installments">6x $58.333 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
             </div>
-        </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Flauta Traversa Profesional" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Flauta Traversa Profesional</h3>
+                <p class="new-product-description">Sonido cristalino y afinación perfecta.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$420.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">6x $70.000 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Auriculares de Monitoreo" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Auriculares de Monitoreo</h3>
+                <p class="new-product-description">Diseño cómodo y audio preciso para tus mezclas.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$120.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">3x $40.000 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Bajo Eléctrico de 4 Cuerdas" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Bajo Eléctrico de 4 Cuerdas</h3>
+                <p class="new-product-description">Graves profundos y gran sustain para tu banda.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$780.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">12x $65.000 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Pedal de Efecto Reverb" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Pedal de Efecto Reverb</h3>
+                <p class="new-product-description">Añade profundidad y ambiente a tu sonido de guitarra.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$95.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">3x $31.666 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Violín Acústico Clásico" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Violín Acústico Clásico</h3>
+                <p class="new-product-description">Hecho a mano, ideal para estudiantes y profesionales.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$550.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">6x $91.666 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+        <a href="#" class="new-product-card">
+            <img src="https://via.placeholder.com/200x200" alt="Interface de Audio USB" class="new-product-image">
+            <div class="new-product-info">
+                <h3 class="new-product-name">Interface de Audio USB</h3>
+                <p class="new-product-description">Graba tu música con claridad y baja latencia.</p>
+                <div class="new-product-price-main">
+                    <span class="new-product-price">$180.000</span>
+                    <span class="new-product-currency">ARS</span>
+                </div>
+                <span class="new-product-installments">3x $60.000 sin interés</span>
+                <button class="new-add-to-cart-btn">Agregar al Carrito</button>
+            </div>
+        </a>
+
+    </div>
+</section>
     </main>
     <footer>
         <div class="footer-content">
@@ -92,17 +240,49 @@
         </div>
     </footer>
     <script>
+        /* Hamburguesaaa */
         document.addEventListener('DOMContentLoaded', function () {
             const hamburgerButton = document.querySelector('.hamburger-menu');
             const navbarMenu = document.querySelector('.navbar-menu');
             if (hamburgerButton && navbarMenu) {
                 hamburgerButton.addEventListener('click', function () {
                     navbarMenu.classList.toggle('active');
-                    hamburgerButton.classList.toggle('active'); // Opcional, para animar la hamburguesa a una 'X'
+                    hamburgerButton.classList.toggle('active');
                 });
+            }
+            /* Desplazamiento de boton a catalogo grids */
+            const botonExplorar = document.getElementById('boton-explorar');
+            const targetSection = document.getElementById('catalogo-instrumentos');
+            if (botonExplorar && targetSection) {
+                botonExplorar.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    smoothScrollTo(targetSection, 1200);
+                });
+            }
+            function smoothScrollTo(element, duration) {
+                const start = window.pageYOffset;
+                const target = element.getBoundingClientRect().top + window.pageYOffset;
+                const distance = target - start;
+                let startTime = null;
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    window.scrollTo(0, start + distance * easeInOutCubic(progress));
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    }
+                }
+                function easeInOutCubic(t) {
+                    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                }
+                requestAnimationFrame(animation);
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

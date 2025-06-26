@@ -1,0 +1,76 @@
+@import 'variables';
+
+/* --- Botones --- */
+.boton-accion {
+    display: inline-block;
+    background-color: $color-azul-primario;
+    color: $color-blanco;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color $transition-medium;
+    border: none; 
+
+    &:hover {
+        background-color: $color-azul-hover;
+    }
+
+    @include tablet {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    @include mobile-lg {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+.boton-enviar { 
+    background-color: #ff0000; 
+    color: $color-blanco;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color $transition-medium, transform $transition-fast;
+
+    &:hover {
+        background-color: $color-negro;
+        transform: translateY(-2px);
+    }
+
+    @include mobile-lg {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
+
+.new-add-to-cart-btn { 
+    background-color: $color-acento-naranja;
+    color: $color-blanco;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    width: calc(100% - 30px); 
+    margin: 0 15px 15px;
+    transition: background-color $transition-fast, transform 0.1s ease;
+
+    &:hover {
+        background-color: darken($color-acento-naranja, 5%); 
+        transform: translateY(-1px);
+    }
+
+    @include mobile-lg { 
+        padding: 8px 12px;
+        font-size: 0.9em;
+        width: calc(100% - 24px);
+        margin: 0 12px 12px;
+    }
+}

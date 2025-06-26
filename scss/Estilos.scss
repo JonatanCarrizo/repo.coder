@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'mixins';
+@import 'base'; // Estilos generales para body, h1, h2, secciones de texto, beneficios
+
+// Componentes de la interfaz
+@import 'navbar';
+@import 'hero'; // Incluye la Hero Section y la barra de búsqueda
+@import 'buttons';
+@import 'forms'; // Incluye el formulario de contacto y el mapa
+@import 'products'; // Catálogo de productos
+@import 'grids'; // Grids de catálogos
+@import 'footer';

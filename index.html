@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-git 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +7,11 @@ git
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,504;1,504&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="site-header">
@@ -53,7 +51,7 @@ git
                     </div>
                 </div>
                 <div class="contenido-superpuesto">
-                    <h1>Descubre un mundo de sonido en The Music Hub.</h1>
+                    <h1>Descubre un mundo de sonido en The Music Hub</h1>
                     <p>Ofrecemos una selecta gama de instrumentos de alta calidad para músicos de todos los niveles.
                         Desde guitarras con alma hasta baterías que marcan el pulso, cada pieza en nuestra colección
                         está elegida para brindarte la mejor experiencia musical. Encuentra tu sonido, comienza aquí.
@@ -62,39 +60,52 @@ git
                 </div>
             </div>
         </section>
-        <div class="seccion-centrada">
-            <h2>Instrumentos</h2>
-            <p class="segundo-texto">
-                Sumérgete en un mundo de posibilidades sonoras. Desde la calidez de las guitarras acústicas ideales para
+
+        <section class="info-seccion info-seccion--izq">
+            <div class="info-seccion__texto">
+                <h2>Instrumentos</h2>
+                <p>Sumérgete en un mundo de posibilidades sonoras. Desde la calidez de las guitarras acústicas ideales para
                 melodías íntimas hasta la potencia de las guitarras eléctricas listas para rockear. Explora nuestra
                 cuidada selección de bajos que proporcionan la base rítmica de cualquier banda, las baterías que marcan
                 el pulso con fuerza y precisión, y los teclados que abren un universo de armonías y texturas. Para
                 aquellos que buscan las raíces de nuestra música, también ofrecemos una variedad de instrumentos
-                folklóricos llenos de tradición y encanto.
-            </p>
-        </div>
-        <div class="seccion-centrada separacion-seccion">
-            <h2>Accesorios</h2>
-            <p class="segundo-texto">
-                No dejes que ningún detalle detenga tu música. En nuestra sección de accesorios, encontrarás todo lo que
+                folklóricos llenos de tradición y encanto.</p>
+            </div>
+            <div class="info-seccion__imagen">
+                <img src="./img/instrumentos-showcase.jpg" alt="Guitarra eléctrica y acústica">
+            </div>
+        </section>
+
+        <section class="info-seccion info-seccion--der">
+            <div class="info-seccion__imagen">
+                <img src="./img/accesorios-showcase.jpg" alt="Pedales, cuerdas y otros accesorios">
+            </div>
+            <div class="info-seccion__texto">
+                <h2>Accesorios</h2>
+                <p>No dejes que ningún detalle detenga tu música. En nuestra sección de accesorios, encontrarás todo lo que
                 necesitas para mantener tus instrumentos en perfecto estado y optimizar tu sonido. Desde juegos de
                 cuerdas de diferentes calibres hasta afinadores precisos, púas de todos los estilos, cables resistentes
                 y fundas protectoras para transportar tu pasión con seguridad. También contamos con soportes, correas y
-                mucho más.
-            </p>
-        </div>
-        <div class="seccion-centrada separacion-seccion">
-            <h2>Servicios</h2>
-            <p class="segundo-texto">
-                En The Music Hub, no solo te ofrecemos productos, sino también la experiencia y el conocimiento de un
+                mucho más.</p>
+            </div>
+        </section>
+
+        <section class="info-seccion info-seccion--izq">
+            <div class="info-seccion__texto">
+                <h2>Servicios</h2>
+                <p>En The Music Hub, no solo te ofrecemos productos, sino también la experiencia y el conocimiento de un
                 equipo apasionado por la música. Recibe asesoramiento personalizado para encontrar el instrumento
                 perfecto que se adapte a tus necesidades y a tu estilo. Además, contamos con servicios de ajuste y
                 mantenimiento para que tus instrumentos siempre suenen de la mejor manera. ¡Estamos aquí para ayudarte
-                en cada paso de tu camino musical!
-            </p>
-        </div>
+                en cada paso de tu camino musical!</p>
+            </div>
+            <div class="info-seccion__imagen">
+                <img src="./img/servicio-tecnico.jpg" alt="Persona afinando una guitarra">
+            </div>
+        </section>
+
         <section class="catalogo-grid-section" id="catalogo-instrumentos">
-            <h2>Explora Nuestros Catálogos</h2>
+            <h2 id="titulo-del-grid">Explora Nuestros Catálogos</h2>
             <div class="catalogo-grid-container">
                 <a href="./pages/cuerda.html" class="catalogo-item item-1">
                     <div class="item-content">
@@ -134,10 +145,25 @@ git
                 </a>
             </div>
         </section>
+        <section class="beneficios-icons-section">
+            <div class="beneficio-item">
+                <i class="fa-solid fa-truck-fast"></i> <h3>Envío Rápido</h3>
+                <p>Recibí tu instrumento en tiempo récord, directo a tu puerta.</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-box-open"></i> <h3>Embalaje Seguro</h3>
+                <p>Tu compra viaja protegida con nuestro embalaje especial.</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-credit-card"></i> <h3>Pago Flexible</h3>
+                <p>Opciones de pago en cuotas y con todos los medios.</p>
+            </div>
+        </section>
         <section>
             <img class="marcas-instrumentos" src="./img/marcasxd.png" alt="marcas">
         </section>
     </main>
+
     <footer>
         <div class="footer-content">
             <p class="footer-copyright">&copy; 2025 The Music Hub. Todos los derechos reservados.</p>
@@ -151,10 +177,10 @@ git
             <section class="footer-section footer-social-media">
                 <div class="footer-social-icons">
                     <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="./img/facebook.png"
-                            alt="Facebook"></a>
+                                alt="Facebook"></a>
                     <a href="https://x.com/?lang=es" target="_blank"><img src="./img/twitter-x.png" alt="Twitter"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.jpg"
-                            alt="Instagram"></a>
+                                alt="Instagram"></a>
                     <a href="https://www.tiktok.com/" target="_blank"><img src="./img/tiktok.png" alt="Tiktok"></a>
                 </div>
             </section>

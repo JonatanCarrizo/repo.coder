@@ -1,0 +1,204 @@
+// scss/_navbar.scss
+
+@import 'variables';
+@import 'mixins';
+
+/* --- Navbar --- */
+.site-header {
+    background-color: $color-negro;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: $zindex-navbar;
+    box-shadow: $box-shadow-ligero;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $max-width-container;
+    margin: 0 auto;
+    padding: 0 $padding-base;
+    position: relative;
+    min-height: $navbar-height-desktop;
+
+    @include tablet {
+        padding: 0 15px;
+    }
+}
+
+.navbar-logo {
+    img {
+        height: 50px;
+        border-radius: 100%;
+        margin: 5px 0;
+        vertical-align: middle;
+
+        @include tablet {
+            height: 45px;
+        }
+
+        @include mobile-lg {
+            height: 40px;
+        }
+    }
+
+    @include tablet {
+        order: 1;
+        margin-right: auto;
+    }
+}
+
+/* --- Botón de Hamburguesa --- */
+.hamburger-menu {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: $zindex-hamburger;
+    font-size: 0;
+    position: absolute;
+    right: $padding-base;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+
+    .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: $color-blanco;
+        margin: 6px 0;
+        transition: all $transition-medium;
+        border-radius: 2px;
+        box-sizing: border-box;
+    }
+
+    @include tablet {
+        display: block;
+        position: relative;
+        order: 3;
+        right: auto;
+        transform: none;
+    }
+
+    @include mobile-lg {
+        right: 10px;
+        .bar {
+            width: 24px;
+            margin: 4px 0;
+        }
+    }
+}
+
+/* --- Menú de Navegación (Desktop) --- */
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+
+    li {
+        margin: 0 15px;
+    }
+
+    &:hover { 
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-blanco;
+        font-weight: bold;
+        padding: 8px 0;
+        display: block;
+        transition: color $transition-medium;
+
+        &:hover {
+            color: $color-acento-naranja;
+        }
+    }
+
+    @include tablet {
+        display: none; // Oculto por defecto en tablet
+        flex-direction: column;
+        position: absolute;
+        top: $navbar-height-mobile;
+        left: 0;
+        right: 0;
+        background-color: $color-negro;
+        box-shadow: $box-shadow-navbar-menu;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        z-index: $zindex-navbar-menu-mobile;
+
+        &.active {
+            display: flex; 
+        }
+
+        li {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        a {
+            padding: 12px 20px;
+            font-size: 1.1em;
+
+            &:hover {
+                background-color: #1a1a1a;
+            }
+        }
+    }
+
+    @include mobile-lg {
+        top: 50px; 
+        padding: 8px 0;
+
+        a {
+            padding: 10px 15px;
+            font-size: 1em;
+        }
+    }
+}
+
+/* Bloque de Iconos de la Navbar */
+.navbar-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .icon-link {
+        color: $color-blanco;
+        font-size: 24px;
+        display: inline-block;
+        text-decoration: none;
+        transition: color $transition-medium, transform $transition-fast;
+
+        &:hover {
+            color: $color-acento-naranja;
+            transform: scale(1.9);
+        }
+    }
+
+    @include tablet {
+        order: 2;
+        margin-left: auto;
+        margin-right: 20px;
+        padding-bottom: 1px;
+    }
+
+    @include mobile-lg {
+        gap: 10px;
+        margin-right: 10px;
+
+        .icon-link {
+            font-size: 22px;
+        }
+    }
+}

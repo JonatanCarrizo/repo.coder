@@ -27,11 +27,15 @@
 /* --- Estilos Generales y del Body --- */
 body {
     margin: 0;
-    background-color: var(--color-blanco);
+    background-color: #2c2a2a94;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: var(--color-texto-oscuro);
+}
+
+main {
+    background-color: #69655d94;
 }
 
 h1,
@@ -143,6 +147,7 @@ p {
     position: relative;
     overflow: hidden;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .imagen-con-texto::before {
@@ -346,7 +351,7 @@ h1 {
 }
 
 h2 {
-    color: var(--color-negro);
+    color: #f5f1f1;
     font-size: 2em;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -379,7 +384,7 @@ h2 {
 }
 
 .segundo-texto {
-    color: var(--color-negro);
+    color: #ffffff;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
@@ -392,94 +397,269 @@ h2 {
     object-fit: cover;
 }
 
-/* --- Catálogo de Productos (Normal) --- */
-.productos-container {
+/*   ------------------------------------------------  Catálogo de Productos  ------------------------------------------------   */
+
+body.productos--body {
+    background-color: #2c2c2c; 
+    color: #e0e0e0; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('../img/foto-de-inicio.png.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+/* --- Estilos para tu <main> con la clase `productos--main` --- */
+main.productos--main {
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); 
+    border-radius: 8px;
+    position: relative;
+}
+
+/* --- Estilos para la sección de productos (sin cambios importantes) --- */
+.new-products-section {
+    padding: 20px; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 25px;
+}
+
+.new-products-section h2 {
+    font-size: 2.8em;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.new-products-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #DA6901;
+    border-radius: 2px;
+}
+
+.new-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px; 
+    border-radius: 8px; 
 }
 
-.producto {
-    border: 1px solid var(--color-borde-gris);
-    border-radius: 8px;
+/* --- Estilos de las tarjetas de producto (sin cambios) --- */
+.new-product-card {
+    background-color: #383838;
+    border-radius: 6px;
+    border: 1px solid #4a4a4a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: var(--color-blanco);
-    text-align: center;
+    text-decoration: none;
+    color: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.new-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: #DA6901;
 }
 
-.producto-imagen {
-    height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--color-fondo-claro);
-    border-bottom: 1px solid var(--color-borde-gris);
+.new-product-image {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover; 
+    padding: 0; 
+    display: block;
+    background-color: #444444; 
+    border-bottom: 1px solid #555555;
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
 }
 
-.producto-imagen img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.new-product-card:hover .new-product-image {
+    transform: scale(1.08);
 }
 
-.producto-info {
+.new-product-info {
     padding: 15px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: left;
 }
 
-.producto-nombre {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: var(--color-texto-oscuro);
+.new-product-name {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #f0f0f0;
+    margin-bottom: 5px;
+    line-height: 1.4;
 }
 
-.producto-precio {
-    color: var(--color-exito-verde);
-    font-weight: bold;
-    font-size: 1.1em;
+.new-product-description {
+    font-size: 0.85em;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.new-product-price-main {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.new-product-price {
+    font-size: 1.7em;
+    font-weight: 800;
+    color: #66bb6a;
+}
+
+.new-product-currency {
+    font-size: 0.85em;
+    color: #a0a0a0;
+    font-weight: 500;
+}
+
+.new-product-installments {
+    font-size: 0.8em;
+    color: #b0b0b0;
     margin-bottom: 15px;
+    display: block;
 }
 
-.boton-carrito {
-    background-color: var(--color-azul-primario);
-    color: var(--color-blanco);
+.new-add-to-cart-btn {
+    background-color: #DA6901;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
-    width: 90%;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+    font-weight: bold;
+    width: calc(100% - 30px);
+    margin: 0 15px 15px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.boton-carrito:hover {
-    background-color: var(--color-azul-hover);
+.new-add-to-cart-btn:hover {
+    background-color: #bb5800;
+    transform: translateY(-1px);
 }
 
+/* --- Media Queries (ajustes responsivos, se mantienen similares) --- */
+@media (max-width: 1024px) {
+    main.productos--main {
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .new-products-section {
+        padding: 15px;
+    }
+    .new-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    .new-product-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    main.productos--main {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .new-products-section h2 {
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+    .new-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+    .new-product-image {
+        height: 140px;
+    }
+    .new-product-info {
+        padding: 10px;
+    }
+    .new-product-name {
+        font-size: 1em;
+    }
+    .new-product-description {
+        font-size: 0.8em;
+    }
+    .new-product-price {
+        font-size: 1.4em;
+    }
+    .new-product-currency, .new-product-installments {
+        font-size: 0.75em;
+    }
+    .new-add-to-cart-btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        width: calc(100% - 24px);
+        margin: 0 12px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-products-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .new-product-card {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    .new-products-section h2 {
+        font-size: 1.8em;
+    }
+    .new-product-image {
+        height: 180px;
+    }
+}
 /* --- Grids de Catálogos --- */
 .catalogo-grid-section {
     padding: 60px 20px;
-    background-color: var(--color-metal-oscuro);
+    background-color: transparent;
     text-align: center;
     font-family: 'Arial', sans-serif;
     color: var(--color-texto-claro-grid);
@@ -487,7 +667,7 @@ h2 {
 
 .catalogo-grid-section h2 {
     font-size: 2.8em;
-    color: #000000;
+    color: #f8f8f8;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -519,7 +699,7 @@ h2 {
     align-items: center;
     position: relative;
     border: var(--borde-grosor) solid var(--color-metal-claro);
-    box-shadow: inset 0 0 3px rgb(0, 0, 0),
+    box-shadow: inset 0 0 3px rgb(204, 201, 201),
         0 4px 8px var(--color-sombra-profunda-grid);
     /* Usando variable de grid */
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
@@ -536,7 +716,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.014);
     transition: background-color 0.3s ease-out;
     z-index: 0;
 }
@@ -545,7 +725,7 @@ h2 {
     padding: 15px;
     text-align: center;
     z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
 }
 
 .catalogo-item h3 {
@@ -569,7 +749,7 @@ h2 {
 }
 
 .catalogo-item:hover::before {
-    background-color: rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.068);
 }
 
 .item-1 {
@@ -1229,3 +1409,211 @@ footer {
         height: 35px;
     }
 }
+
+/*                                               iconos de paquete,tarjeta y camion                                     */
+
+.beneficios-icons-section {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 60px 20px; 
+    background-color: transparent; 
+    text-align: center; 
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.beneficio-item {
+    flex: 1; 
+    min-width: 250px; 
+    max-width: 350px;
+    padding: 25px;
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} /* CIERRE DE .beneficio-item que faltaba */
+
+.beneficio-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.beneficio-item i {
+    font-size: 3.5em; 
+    color: #49453e; 
+    margin-bottom: 20px; 
+    display: block; 
+}
+
+.beneficio-item h3 {
+    font-size: 1.6em; 
+    color: #000000; 
+    margin-bottom: 10px; 
+}
+
+.beneficio-item p {
+    font-size: 1em; 
+    color: var(--color-texto-gris); 
+    line-height: 1.5;
+}
+
+/* Media Queries*/
+@media (max-width: 768px) {
+    .beneficios-icons-section {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 40px 15px;
+    }
+
+    .beneficio-item {
+        margin-bottom: 25px; 
+        min-width: unset; 
+        width: 100%; 
+        max-width: 400px; 
+    }
+
+    .beneficio-item:last-child {
+        margin-bottom: 0; 
+    }
+}
+
+/*--------------------------------------------------------------- Mejorar el index textos ----------------------------------------------------------------------------*/
+
+.info-seccion {
+    display: flex;
+    align-items: center;
+    gap: 60px; 
+    background-color: #282828; 
+    color: #e0e0e0;
+    padding: 50px; 
+    margin-bottom: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.info-seccion:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); 
+}
+
+/* Estilos para los títulos dentro de estas secciones */
+.info-seccion h2 {
+    font-size: 3em; 
+    color: #f8f8f8; 
+    margin-bottom: 25px; 
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 700; 
+    letter-spacing: -0.5px; 
+}
+
+/* Línea decorativa debajo del título - ahora más moderna */
+.info-seccion h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80px; /* Más larga */
+    height: 4px; /* Más gruesa */
+    background-color: #DA6901;
+    border-radius: 4px;
+    opacity: 0.8; 
+}
+
+/* Estilos para los párrafos dentro de estas secciones */
+.info-seccion p {
+    font-size: 1.2em; 
+    line-height: 1.7; 
+    color: #c0c0c0; 
+}
+
+/* Contenedor del texto (h2 y p) */
+.info-seccion__texto {
+    flex: 1;
+    padding-right: 20px; 
+}
+
+/* Contenedor de la imagen */
+.info-seccion__imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para la imagen descriptiva */
+.info-seccion__imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.info-seccion--izq {
+    border-radius: 12px 60px 60px 12px; 
+    padding-left: 60px; 
+}
+
+.info-seccion--der {
+    border-radius: 60px 12px 12px 60px; 
+    flex-direction: row-reverse;
+    padding-right: 60px;
+}
+
+/* Ajuste de la línea del título para secciones a la derecha */
+.info-seccion--der .info-seccion__texto h2::after {
+    left: auto;
+    right: 0;
+}
+
+/* --- Media Queries para Responsive (pantallas más pequeñas) --- */
+@media (max-width: 992px) {
+    .info-seccion {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        margin: 40px auto;
+        max-width: 90%; 
+        border-radius: 15px !important; /* 
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transform: none;
+    }
+
+
+    /* Resetea los padding específicos y las direcciones de flex en móvil */
+    .info-seccion--izq,
+    .info-seccion--der {
+        padding-left: 30px;
+        padding-right: 30px;
+        flex-direction: column;
+        border-radius: 15px !important;
+    }
+
+    /* Ajusta la línea del título y el texto para que estén centrados en móvil */
+    .info-seccion h2 {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .info-seccion h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    .info-seccion p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    /* Mueve la imagen por encima del texto en mobile para las secciones que la tenían a la izquierda */
+    .info-seccion--der .info-seccion__imagen {
+        order: -1;
+    }
+} 

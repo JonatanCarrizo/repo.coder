@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* --- Navbar --- */
+.site-header {
+  background-color: #000000;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  min-height: 60px;
+}
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0 15px;
+  }
+}
+
+.navbar-logo img {
+  height: 50px;
+  border-radius: 100%;
+  margin: 5px 0;
+  vertical-align: middle;
+}
+@media (max-width: 991px) {
+  .navbar-logo img {
+    height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-logo {
+    order: 1;
+    margin-right: auto;
+  }
+}
+
+/* --- Botón de Hamburguesa --- */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  font-size: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+.hamburger-menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+@media (max-width: 991px) {
+  .hamburger-menu {
+    display: block;
+    position: relative;
+    order: 3;
+    right: auto;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger-menu {
+    right: 10px;
+  }
+  .hamburger-menu .bar {
+    width: 24px;
+    margin: 4px 0;
+  }
+}
+
+/* --- Menú de Navegación (Desktop) --- */
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.navbar-menu li {
+  margin: 0 15px;
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+.navbar-menu a:hover {
+  color: #da6901;
+}
+@media (max-width: 991px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar-menu.active {
+    display: flex;
+  }
+  .navbar-menu li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-menu a {
+    padding: 12px 20px;
+    font-size: 1.1em;
+  }
+  .navbar-menu a:hover {
+    background-color: #1a1a1a;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-menu {
+    top: 50px;
+    padding: 8px 0;
+  }
+  .navbar-menu a {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+}
+
+/* Bloque de Iconos de la Navbar */
+.navbar-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.navbar-icons .icon-link {
+  color: #ffffff;
+  font-size: 24px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.navbar-icons .icon-link:hover {
+  color: #da6901;
+  transform: scale(1.9);
+}
+@media (max-width: 991px) {
+  .navbar-icons {
+    order: 2;
+    margin-left: auto;
+    margin-right: 20px;
+    padding-bottom: 1px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-icons {
+    gap: 10px;
+    margin-right: 10px;
+  }
+  .navbar-icons .icon-link {
+    font-size: 22px;
+  }
+}
